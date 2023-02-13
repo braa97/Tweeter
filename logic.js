@@ -74,15 +74,6 @@ const Tweeter  = function() {
 }
 
 
-// const tweeter = Tweeter ()
-// tweeter.addComment("p2", "Yaawzaaaaaaaaaaaaaaaaa")
-// const posts = tweeter.getPosts()
-// console.log(...posts)
-
-
-
-
-
 
 
 
