@@ -31,12 +31,10 @@ const Tweeter  = function() {
     }
 
     const removePost = function(postId) {
-        let count = 0
-        for (currentPost of _posts) {
+        for ([index, currentPost] of _posts.entries()) {
             if (currentPost.id === postId) {
-                _posts.splice(count, 1)
+                _posts.splice(index, 1)
             }
-            count ++
         }
     }
 
@@ -52,12 +50,10 @@ const Tweeter  = function() {
     const removeComment = function(postId, commentID ) {
         for (currentPost of _posts) {
             if (currentPost.id === postId) {
-                let count = 0
-                for (comment of currentPost.comments) {
+                for ([index, comment] of currentPost.comments.entries()) {
                     if (comment.id === commentID) {
-                        currentPost.comments.splice(count, 1)
+                        currentPost.comments.splice(index, 1)
                     }
-                    count ++
                 }
             }
             
