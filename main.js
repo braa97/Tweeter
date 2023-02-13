@@ -1,6 +1,8 @@
 const tweeter = Tweeter()
 const renderer = Renderer()
 
+renderer.renderPosts(tweeter.getPosts())
+
 const post = function() {
     tweeter.addPost($("#input").val())
     renderer.renderPosts(tweeter.getPosts())
@@ -40,5 +42,5 @@ $("#posts").on("click", ".delete-comment", function() {
 
 
 
-renderer.renderPosts(tweeter.getPosts())
+
 
