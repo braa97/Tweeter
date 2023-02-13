@@ -25,8 +25,8 @@ const Tweeter  = function() {
 
     const getPosts = () => _posts
 
-    const addPost = function(newPostText) {
-        _posts.push({text: newPostText, id: "p" + postIdCounter, comments: []})
+    const addPost = function(post) {
+        _posts.push({text: post, id: "p" + postIdCounter, comments: []})
         postIdCounter ++
     }
 
@@ -40,10 +40,10 @@ const Tweeter  = function() {
         }
     }
 
-    const addComment = function(postId, newCommentText) {
+    const addComment = function(postId, comment) {
         for (currentPost of _posts) {
             if (currentPost.id === postId) {
-                currentPost.comments.push({id: "c" + commentIdCounter, text: newCommentText})
+                currentPost.comments.push({id: "c" + commentIdCounter, text: comment})
                 commentIdCounter ++
             }
         }
