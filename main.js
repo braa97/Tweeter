@@ -13,11 +13,6 @@ const postElementId = function(reference) {
     return reference.closest(".post").data().id
 }
 
-const commentElementId = function(reference) {
-    return reference
-}
-
-
 $("#posts").on("click", ".delete", function() {
     let postId = postElementId($(this))
     tweeter.removePost(postId)
